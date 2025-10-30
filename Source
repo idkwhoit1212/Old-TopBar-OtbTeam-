@@ -80,7 +80,8 @@ G2L["8"]["Position"] = UDim2.new(0, 111, 0, 2);
 
 -- StarterGui.RobloxGui.Base.InventButton.LocalScript
 G2L["9"] = Instance.new("LocalScript", G2L["8"]);
-
+G2L["9"]["Enabled"] = false;
+G2L["9"]["Disabled"] = true;
 
 
 -- StarterGui.RobloxGui.Base.PlayerListContainer
@@ -10120,26 +10121,6 @@ local script = G2L["7"];
 	
 end;
 task.spawn(C_7);
--- StarterGui.RobloxGui.Base.InventButton.LocalScript
-local function C_9()
-local script = G2L["9"];
-	-- Эт��т LocalScript д��лжен ��ах��диться
-	
-	local button = script.Parent
-	
-	-- Полу��аем PlayersShield (и����ента
-	local PlayersShield = button.Parent.Parent.Parent:FindFirstChild("PlayersShield")
-	if not PlayersShield then
-		warn("PlayersShield н�� най�
-			return
-	end
-	
-	button.MouseButton1Click:Connect(function()
-		PlayersShield.Visible = not PlayersShield.Visible
-	end)
-	
-end;
-task.spawn(C_9);
 -- StarterGui.RobloxGui.Base.PlayerListContainer.ScrollList.Main
 local function C_c()
 local script = G2L["c"];
