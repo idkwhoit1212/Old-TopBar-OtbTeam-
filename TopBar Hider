@@ -1,0 +1,17 @@
+local coreGui = game:GetService("CoreGui")
+
+task.wait(1) 
+
+local topBarApp = coreGui:FindFirstChild("TopBarApp")
+local unibarLeftFrame = topBarApp and topBarApp:FindFirstChild("TopBarApp") and topBarApp.TopBarApp:FindFirstChild("UnibarLeftFrame")
+local menuIconHolder = topBarApp and topBarApp:FindFirstChild("TopBarApp") and topBarApp.TopBarApp:FindFirstChild("MenuIconHolder")
+
+if unibarLeftFrame and menuIconHolder then
+    -- Скрываем левую часть Topbar
+    unibarLeftFrame.Visible = false
+    -- Скрываем кнопку меню
+    menuIconHolder.Visible = false
+    print("OK!")
+else
+    print("Error!")
+end
