@@ -1,3 +1,13 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
+
+-- Instances: 957 | Scripts: 44 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- StarterGui.RobloxGui
@@ -11225,6 +11235,11 @@ G2L["3bc"] = Instance.new("LocalScript", G2L["1"]);
 G2L["3bc"]["Name"] = [[ExploitEngine]];
 
 
+-- StarterGui.RobloxGui.ExploitEngine2
+G2L["3bd"] = Instance.new("LocalScript", G2L["1"]);
+G2L["3bd"]["Name"] = [[ExploitEngine2]];
+
+
 -- StarterGui.RobloxGui.GuiMouse
 local function C_2()
 local script = G2L["2"];
@@ -12351,7 +12366,7 @@ task.spawn(C_3b9);
 -- StarterGui.RobloxGui.ExploitEngine
 local function C_3bc()
 local script = G2L["3bc"];
-	-- LocalScript → ВНУТРИ RobloxGui
+	-- LocalScript → ВСТАВЬ В RobloxGui (или в ExecutorLite)
 	-- Назови: ExploitEngine
 	
 	local player = game.Players.LocalPlayer
@@ -12362,37 +12377,50 @@ local script = G2L["3bc"];
 		error("RobloxGui не найден!")
 	end
 	
-	-- === САМ ИЩЕТ CommandBox (TextBox) ===
-	local commandBox
-	for _, obj in ipairs(robloxGui:GetDescendants()) do
-		if obj.Name == "CommandBox" and obj:IsA("TextBox") then
-			commandBox = obj
-			break
+	-- ИЩЕМ ExecutorLite → Page
+	local executorLite = robloxGui:FindFirstChild("ExecutorLite")
+	local page = executorLite and executorLite:FindFirstChild("Page")
+	
+	if not page then
+		error("ExecutorLite > Page не найден!")
+	end
+	
+	-- === САМ ИЩЕТ В Page ===
+	local commandBox = page:FindFirstChild("CommandBox")
+	local executeButton = page:FindFirstChild("ExecuteButton")
+	
+	-- Если не нашёл по имени — ищем по типу
+	if not commandBox then
+		for _, obj in ipairs(page:GetDescendants()) do
+			if obj:IsA("TextBox") and obj.Name:find("Box") then
+				commandBox = obj
+				break
+			end
 		end
 	end
 	
-	-- === САМ ИЩЕТ ExecuteButton (ImageButton или любой кликабельный) ===
-	local executeButton
-	for _, obj in ipairs(robloxGui:GetDescendants()) do
-		if obj.Name == "ExecuteButton" and (obj:IsA("ImageButton") or obj:IsA("TextButton")) then
-			executeButton = obj
-			break
+	if not executeButton then
+		for _, obj in ipairs(page:GetDescendants()) do
+			if (obj:IsA("ImageButton") or obj:IsA("TextButton")) and obj.Name:find("Execute") then
+				executeButton = obj
+				break
+			end
 		end
 	end
 	
 	-- === ПРОВЕРКА ===
 	if not commandBox then
-		error("CommandBox не найден! Убедись: TextBox → Name = 'CommandBox'")
+		error("CommandBox не найден в Page! Ищи TextBox с 'Box' в имени")
 	end
 	if not executeButton then
-		error("ExecuteButton не найден! Убедись: ImageButton → Name = 'ExecuteButton'")
+		error("ExecuteButton не найден в Page! Ищи ImageButton с 'Execute' в имени")
 	end
 	
-	print("ExploitEngine: CommandBox и ExecuteButton найдены!")
+	print("ExploitEngine: ВСЁ НАЙДЕНО!")
 	print("   → CommandBox: " .. commandBox:GetFullName())
 	print("   → ExecuteButton: " .. executeButton:GetFullName())
 	
-	-- === ВЫПОЛНЕНИЕ КОДА ===
+	-- === ВЫПОЛНЕНИЕ ===
 	executeButton.MouseButton1Click:Connect(function()
 		local code = commandBox.Text:gsub("^%s*(.-)%s*$", "%1")
 		if not code or code == "" then
@@ -12412,5 +12440,95 @@ local script = G2L["3bc"];
 	end)
 end;
 task.spawn(C_3bc);
+-- StarterGui.RobloxGui.ExploitEngine2
+local function C_3bd()
+local script = G2L["3bd"];
+	-- LocalScript → ВСТАВЬ В RobloxGui
+	-- Назови: ExploitEngine2
+	
+	local player = game.Players.LocalPlayer
+	local playerGui = player:WaitForChild("PlayerGui")
+	local robloxGui = playerGui:WaitForChild("RobloxGui", 15)
+	
+	if not robloxGui then
+		error("RobloxGui не найден!")
+	end
+	
+	-- === ПОЛНЫЙ ПУТЬ К Page ===
+	local path = {
+		"ExploitShield",
+		"SettingsShield",
+		"MenuContainer",
+		"PageViewClipper",
+		"PageView",
+		"Page"
+	}
+	
+	local current = robloxGui
+	for _, name in ipairs(path) do
+		current = current:FindFirstChild(name)
+		if not current then
+			error("Не найден: " .. table.concat(path, " > ", 1, #path) .. " > " .. name)
+		end
+	end
+	
+	local page = current
+	print("ExploitEngine2: Page найден! Путь пройден.")
+	
+	-- === САМ ИЩЕТ В Page ===
+	local commandBox = page:FindFirstChild("CommandBox")
+	local executeButton = page:FindFirstChild("ExecuteButton")
+	
+	-- Если имена другие — ищем по типу
+	if not commandBox then
+		for _, obj in ipairs(page:GetDescendants()) do
+			if obj:IsA("TextBox") and (obj.Name:find("Box") or obj.Name:find("Input")) then
+				commandBox = obj
+				break
+			end
+		end
+	end
+	
+	if not executeButton then
+		for _, obj in ipairs(page:GetDescendants()) do
+			if (obj:IsA("ImageButton") or obj:IsA("TextButton")) and obj.Name:find("Execute") then
+				executeButton = obj
+				break
+			end
+		end
+	end
+	
+	-- === ПРОВЕРКА ===
+	if not commandBox then
+		error("CommandBox не найден в Page!")
+	end
+	if not executeButton then
+		error("ExecuteButton не найден в Page!")
+	end
+	
+	print("ExploitEngine2: ВСЁ НАЙДЕНО!")
+	print("   → CommandBox: " .. commandBox:GetFullName())
+	print("   → ExecuteButton: " .. executeButton:GetFullName())
+	
+	-- === ВЫПОЛНЕНИЕ ===
+	executeButton.MouseButton1Click:Connect(function()
+		local code = commandBox.Text:gsub("^%s*(.-)%s*$", "%1")
+		if not code or code == "" then
+			warn("Код пустой!")
+			return
+		end
+	
+		local success, err = pcall(function()
+			loadstring(code)()
+		end)
+	
+		if success then
+			print("Код выполнен во второй панели!")
+		else
+			warn("Ошибка: " .. tostring(err))
+		end
+	end)
+end;
+task.spawn(C_3bd);
 
 return G2L["1"], require;
