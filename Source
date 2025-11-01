@@ -26,7 +26,7 @@ G2L["2"]["Name"] = [[GuiMouse]];
 
 -- StarterGui.RobloxGui.Base
 G2L["3"] = Instance.new("Frame", G2L["1"]);
-G2L["3"]["ZIndex"] = 9999;
+G2L["3"]["ZIndex"] = 99999999;
 G2L["3"]["BorderSizePixel"] = 0;
 G2L["3"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["3"]["Size"] = UDim2.new(1, 0, 0, 36);
@@ -377,7 +377,7 @@ G2L["25"]["Position"] = UDim2.new(0, 154, 0, 4);
 -- StarterGui.RobloxGui.LeaveShield
 G2L["26"] = Instance.new("Frame", G2L["1"]);
 G2L["26"]["Visible"] = false;
-G2L["26"]["ZIndex"] = 2;
+G2L["26"]["ZIndex"] = 99999999;
 G2L["26"]["BorderSizePixel"] = 0;
 G2L["26"]["ClipsDescendants"] = true;
 G2L["26"]["Size"] = UDim2.new(1, 0, 1, 36);
@@ -1475,7 +1475,7 @@ G2L["8a"]["Position"] = UDim2.new(0.15, 0, 0.475, 0);
 -- StarterGui.RobloxGui.PlayersShield
 G2L["8b"] = Instance.new("Frame", G2L["1"]);
 G2L["8b"]["Visible"] = false;
-G2L["8b"]["ZIndex"] = 2;
+G2L["8b"]["ZIndex"] = 99999999;
 G2L["8b"]["BorderSizePixel"] = 0;
 G2L["8b"]["ClipsDescendants"] = true;
 G2L["8b"]["Size"] = UDim2.new(1, 0, 1, 36);
@@ -2480,7 +2480,7 @@ G2L["ea"]["Position"] = UDim2.new(0.15, 0, 0.475, 0);
 -- StarterGui.RobloxGui.ResetShield
 G2L["eb"] = Instance.new("Frame", G2L["1"]);
 G2L["eb"]["Visible"] = false;
-G2L["eb"]["ZIndex"] = 2;
+G2L["eb"]["ZIndex"] = 99999999;
 G2L["eb"]["BorderSizePixel"] = 0;
 G2L["eb"]["ClipsDescendants"] = true;
 G2L["eb"]["Size"] = UDim2.new(1, 0, 1, 36);
@@ -7661,7 +7661,7 @@ G2L["28b"]["Position"] = UDim2.new(0.15, 0, 0.475, 0);
 -- StarterGui.RobloxGui.SettingsShield
 G2L["28c"] = Instance.new("Frame", G2L["1"]);
 G2L["28c"]["Visible"] = false;
-G2L["28c"]["ZIndex"] = 2;
+G2L["28c"]["ZIndex"] = 99999999;
 G2L["28c"]["BorderSizePixel"] = 0;
 G2L["28c"]["ClipsDescendants"] = true;
 G2L["28c"]["Size"] = UDim2.new(1, 0, 1.04663, 0);
@@ -10063,7 +10063,7 @@ G2L["34c"]["Position"] = UDim2.new(1, -350, 0, 0);
 -- StarterGui.RobloxGui.ExploitShield
 G2L["34d"] = Instance.new("Frame", G2L["1"]);
 G2L["34d"]["Visible"] = false;
-G2L["34d"]["ZIndex"] = 2;
+G2L["34d"]["ZIndex"] = 99999999;
 G2L["34d"]["BorderSizePixel"] = 0;
 G2L["34d"]["ClipsDescendants"] = true;
 G2L["34d"]["Size"] = UDim2.new(1, 0, 1, 36);
@@ -11070,6 +11070,7 @@ G2L["3aa"]["Position"] = UDim2.new(0.15, 0, 0.475, 0);
 -- StarterGui.RobloxGui.ExecutorLite
 G2L["3ab"] = Instance.new("Frame", G2L["1"]);
 G2L["3ab"]["Visible"] = false;
+G2L["3ab"]["ZIndex"] = 99999999;
 G2L["3ab"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["3ab"]["AnchorPoint"] = Vector2.new(0.5, 0);
 G2L["3ab"]["Size"] = UDim2.new(0, 619, 0, 445);
