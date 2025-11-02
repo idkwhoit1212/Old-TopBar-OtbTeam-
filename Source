@@ -1499,6 +1499,7 @@ G2L["8f"]["Position"] = UDim2.new(0.15, 0, 0.475, 0);
 
 -- StarterGui.RobloxGui.PlayersShield
 G2L["90"] = Instance.new("Frame", G2L["1"]);
+G2L["90"]["Visible"] = false;
 G2L["90"]["ZIndex"] = 99999999;
 G2L["90"]["BorderSizePixel"] = 0;
 G2L["90"]["ClipsDescendants"] = true;
