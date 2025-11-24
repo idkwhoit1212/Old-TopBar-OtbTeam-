@@ -1,0 +1,522 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
+
+-- Instances: 1370 | Scripts: 91 | Modules: 0 | Tags: 0
+local G2L = {};
+
+-- StarterGui.RobloxGui
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["IgnoreGuiInset"] = true;
+G2L["1"]["DisplayOrder"] = 999999999;
+G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.None;
+G2L["1"]["ClipToDeviceSafeArea"] = false;
+G2L["1"]["Name"] = [[RobloxGui]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["1"]["ResetOnSpawn"] = false;
+
+
+-- StarterGui.RobloxGui.GuiMouse
+G2L["2"] = Instance.new("LocalScript", G2L["1"]);
+G2L["2"]["Name"] = [[GuiMouse]];
+
+
+-- StarterGui.RobloxGui.ExploitEngine
+G2L["3"] = Instance.new("LocalScript", G2L["1"]);
+G2L["3"]["Name"] = [[ExploitEngine]];
+
+
+-- StarterGui.RobloxGui.ExploitEngine2
+G2L["4"] = Instance.new("LocalScript", G2L["1"]);
+G2L["4"]["Name"] = [[ExploitEngine2]];
+
+
+-- StarterGui.RobloxGui.HidingEngine
+G2L["5"] = Instance.new("LocalScript", G2L["1"]);
+G2L["5"]["Name"] = [[HidingEngine]];
+
+
+-- StarterGui.RobloxGui.LegacyChat
+G2L["6"] = Instance.new("LocalScript", G2L["1"]);
+G2L["6"]["Name"] = [[LegacyChat]];
+
+
+-- StarterGui.RobloxGui.EnableChatEveryFrame
+G2L["7"] = Instance.new("LocalScript", G2L["1"]);
+G2L["7"]["Enabled"] = false;
+G2L["7"]["Name"] = [[EnableChatEveryFrame]];
+G2L["7"]["Disabled"] = true;
+
+
+-- StarterGui.RobloxGui.TSC v1
+G2L["8"] = Instance.new("LocalScript", G2L["1"]);
+G2L["8"]["Enabled"] = false;
+G2L["8"]["Name"] = [[TSC v1]];
+G2L["8"]["Disabled"] = true;
+
+
+-- StarterGui.RobloxGui.MotionBlur
+G2L["9"] = Instance.new("LocalScript", G2L["1"]);
+G2L["9"]["Enabled"] = false;
+G2L["9"]["Name"] = [[MotionBlur]];
+G2L["9"]["Disabled"] = true;
+
+
+-- StarterGui.RobloxGui.ItemBlur
+G2L["a"] = Instance.new("LocalScript", G2L["1"]);
+G2L["a"]["Enabled"] = false;
+G2L["a"]["Name"] = [[ItemBlur]];
+G2L["a"]["Disabled"] = true;
+
+
+-- StarterGui.RobloxGui.Base
+G2L["b"] = Instance.new("Frame", G2L["1"]);
+G2L["b"]["ZIndex"] = 999999999;
+G2L["b"]["BorderSizePixel"] = 0;
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b"]["ClipsDescendants"] = true;
+G2L["b"]["Size"] = UDim2.new(1, 0, 0, 36);
+G2L["b"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["b"]["Name"] = [[Base]];
+G2L["b"]["LayoutOrder"] = 999999999;
+G2L["b"]["BackgroundTransparency"] = 0.5;
+
+
+-- StarterGui.RobloxGui.Base.MenuButton
+G2L["c"] = Instance.new("ImageButton", G2L["b"]);
+G2L["c"]["BackgroundTransparency"] = 1;
+G2L["c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c"]["Image"] = [[rbxasset://textures/ui/Menu/Hamburger@2x.png]];
+G2L["c"]["Selected"] = true;
+G2L["c"]["Size"] = UDim2.new(0, 30, 0, 25);
+G2L["c"]["Name"] = [[MenuButton]];
+G2L["c"]["Position"] = UDim2.new(0, 11, 0, 7);
+
+
+-- StarterGui.RobloxGui.Base.MenuButton.LocalScript
+G2L["d"] = Instance.new("LocalScript", G2L["c"]);
+
+
+
+-- StarterGui.RobloxGui.Base.MenuButton.LocalScript
+G2L["e"] = Instance.new("LocalScript", G2L["c"]);
+
+
+
+-- StarterGui.RobloxGui.Base.ChatButton
+G2L["f"] = Instance.new("ImageButton", G2L["b"]);
+G2L["f"]["BackgroundTransparency"] = 1;
+G2L["f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["f"]["Image"] = [[rbxasset://textures/ui/Chat/Chat@2x.png]];
+G2L["f"]["Selected"] = true;
+G2L["f"]["Size"] = UDim2.new(0, 32, 0, 30);
+G2L["f"]["Name"] = [[ChatButton]];
+G2L["f"]["Position"] = UDim2.new(0, 59, 0, 4);
+
+
+-- StarterGui.RobloxGui.Base.ChatButton.ChatScript
+G2L["10"] = Instance.new("LocalScript", G2L["f"]);
+G2L["10"]["Name"] = [[ChatScript]];
+
+
+-- StarterGui.RobloxGui.Base.ChatButton.LocalScript
+G2L["11"] = Instance.new("LocalScript", G2L["f"]);
+
+
+
+-- StarterGui.RobloxGui.Base.InventButton
+G2L["12"] = Instance.new("ImageButton", G2L["b"]);
+G2L["12"]["BackgroundTransparency"] = 1;
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["12"]["Image"] = [[rbxasset://textures/ui/Backpack/Backpack@2x.png]];
+G2L["12"]["Selected"] = true;
+G2L["12"]["Size"] = UDim2.new(0, 23, 0, 30);
+G2L["12"]["Name"] = [[InventButton]];
+G2L["12"]["Position"] = UDim2.new(0, 111, 0, 2);
+
+
+-- StarterGui.RobloxGui.Base.InventButton.LocalScript
+G2L["13"] = Instance.new("LocalScript", G2L["12"]);
+G2L["13"]["Enabled"] = false;
+G2L["13"]["Disabled"] = true;
+
+
+-- StarterGui.RobloxGui.Base.InfoBase
+G2L["14"] = Instance.new("Frame", G2L["b"]);
+G2L["14"]["BorderSizePixel"] = 0;
+G2L["14"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["14"]["Size"] = UDim2.new(0, 268, 0, 36);
+G2L["14"]["Position"] = UDim2.new(0.79144, 0, 0, 0);
+G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["14"]["Name"] = [[InfoBase]];
+G2L["14"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.RobloxGui.Base.InfoBase.Age
+G2L["15"] = Instance.new("TextLabel", G2L["14"]);
+G2L["15"]["TextSize"] = 12;
+G2L["15"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["15"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["BackgroundTransparency"] = 1;
+G2L["15"]["Size"] = UDim2.new(0, 54, 0, 15);
+G2L["15"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["15"]["Text"] = [[Account: 13+]];
+G2L["15"]["Name"] = [[Age]];
+G2L["15"]["Position"] = UDim2.new(0, 0, 0, 16);
+
+
+-- StarterGui.RobloxGui.Base.InfoBase.Nickname
+G2L["16"] = Instance.new("TextLabel", G2L["14"]);
+G2L["16"]["TextSize"] = 14;
+G2L["16"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["16"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["16"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["16"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["16"]["BackgroundTransparency"] = 1;
+G2L["16"]["Size"] = UDim2.new(0, 150, 0, 15);
+G2L["16"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["16"]["Text"] = [[123451234512345123456]];
+G2L["16"]["Name"] = [[Nickname]];
+G2L["16"]["Position"] = UDim2.new(0, 0, 0.11111, 0);
+
+
+-- StarterGui.RobloxGui.Base.InfoBase.Nickname.LocalScript
+G2L["17"] = Instance.new("LocalScript", G2L["16"]);
+
+
+
+-- StarterGui.RobloxGui.Base.InfoBase.HealthFrame
+G2L["18"] = Instance.new("Frame", G2L["14"]);
+G2L["18"]["BorderSizePixel"] = 0;
+G2L["18"]["BackgroundColor3"] = Color3.fromRGB(160, 160, 160);
+G2L["18"]["Size"] = UDim2.new(0, 175, 0, 4);
+G2L["18"]["Position"] = UDim2.new(0, 0, 0, 31);
+G2L["18"]["Name"] = [[HealthFrame]];
+G2L["18"]["LayoutOrder"] = 1;
+
+
+-- StarterGui.RobloxGui.Base.InfoBase.HealthFrame.HealthBarUpdater
+G2L["19"] = Instance.new("LocalScript", G2L["18"]);
+G2L["19"]["Name"] = [[HealthBarUpdater]];
+
+
+-- StarterGui.RobloxGui.Base.InfoBase.HealthFrame.Bar
+G2L["1a"] = Instance.new("Frame", G2L["18"]);
+G2L["1a"]["BorderSizePixel"] = 0;
+G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(86, 255, 0);
+G2L["1a"]["Size"] = UDim2.new(0, 175, 0, 3);
+G2L["1a"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["1a"]["Name"] = [[Bar]];
+
+
+-- StarterGui.RobloxGui.Base.ExploitButton
+G2L["1b"] = Instance.new("ImageButton", G2L["b"]);
+G2L["1b"]["BackgroundTransparency"] = 1;
+G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1b"]["Image"] = [[rbxassetid://14321074389]];
+G2L["1b"]["Selected"] = true;
+G2L["1b"]["Size"] = UDim2.new(0, 32, 0, 30);
+G2L["1b"]["Name"] = [[ExploitButton]];
+G2L["1b"]["Position"] = UDim2.new(0, 154, 0, 4);
+
+
+-- StarterGui.RobloxGui.Base.TimeTop
+G2L["1c"] = Instance.new("TextLabel", G2L["b"]);
+G2L["1c"]["ZIndex"] = 999999999;
+G2L["1c"]["BorderSizePixel"] = 0;
+G2L["1c"]["TextSize"] = 24;
+G2L["1c"]["TextTransparency"] = 0.5;
+G2L["1c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1c"]["BackgroundTransparency"] = 1;
+G2L["1c"]["Size"] = UDim2.new(1, 0, 0, 36);
+G2L["1c"]["Visible"] = false;
+G2L["1c"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["1c"]["Text"] = [[$%:@&]];
+G2L["1c"]["Name"] = [[TimeTop]];
+
+
+-- StarterGui.RobloxGui.Base.LocalScript
+G2L["1d"] = Instance.new("LocalScript", G2L["b"]);
+
+
+
+-- StarterGui.RobloxGui.LeaveShield
+G2L["1e"] = Instance.new("Frame", G2L["1"]);
+G2L["1e"]["Visible"] = false;
+G2L["1e"]["ZIndex"] = 99999999;
+G2L["1e"]["BorderSizePixel"] = 0;
+G2L["1e"]["ClipsDescendants"] = true;
+G2L["1e"]["Size"] = UDim2.new(1, 0, 1.097, 0);
+G2L["1e"]["Position"] = UDim2.new(0, 0, -0.09749, 0);
+G2L["1e"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["1e"]["Name"] = [[LeaveShield]];
+G2L["1e"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.RobloxGui.LeaveShield.SettingsShield
+G2L["1f"] = Instance.new("Frame", G2L["1e"]);
+G2L["1f"]["Active"] = true;
+G2L["1f"]["ZIndex"] = 2;
+G2L["1f"]["BorderSizePixel"] = 0;
+G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42);
+G2L["1f"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["1f"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["1f"]["Name"] = [[SettingsShield]];
+G2L["1f"]["BackgroundTransparency"] = 0.2;
+
+
+-- StarterGui.RobloxGui.LeaveShield.SettingsShield.VRBackground
+G2L["20"] = Instance.new("Frame", G2L["1f"]);
+G2L["20"]["Visible"] = false;
+G2L["20"]["BorderSizePixel"] = 0;
+G2L["20"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42);
+G2L["20"]["Size"] = UDim2.new(1, 8, 1, -40);
+G2L["20"]["Position"] = UDim2.new(0, -4, 0, 24);
+G2L["20"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["20"]["Name"] = [[VRBackground]];
+G2L["20"]["BackgroundTransparency"] = 0.2;
+
+
+-- StarterGui.RobloxGui.LeaveShield.SettingsShield.VersionContainer
+G2L["21"] = Instance.new("Frame", G2L["1f"]);
+G2L["21"]["Visible"] = false;
+G2L["21"]["ZIndex"] = 5;
+G2L["21"]["BorderSizePixel"] = 0;
+G2L["21"]["AutoLocalize"] = false;
+G2L["21"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42);
+G2L["21"]["AnchorPoint"] = Vector2.new(0, 1);
+G2L["21"]["Size"] = UDim2.new(1, 0, 0, 26);
+G2L["21"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["21"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["21"]["Name"] = [[VersionContainer]];
+G2L["21"]["BackgroundTransparency"] = 0.2;
+
+
+-- StarterGui.RobloxGui.LeaveShield.SettingsShield.VersionContainer.VersionContainer
+G2L["22"] = Instance.new("UIListLayout", G2L["21"]);
+G2L["22"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+G2L["22"]["Padding"] = UDim.new(0, 6);
+G2L["22"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
+G2L["22"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+G2L["22"]["Name"] = [[VersionContainer]];
+G2L["22"]["FillDirection"] = Enum.FillDirection.Horizontal;
+
+
+-- StarterGui.RobloxGui.LeaveShield.SettingsShield.VersionContainer.ServerVersionLabel
+G2L["23"] = Instance.new("TextLabel", G2L["21"]);
+G2L["23"]["ZIndex"] = 5;
+G2L["23"]["TextSize"] = 20;
+G2L["23"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["23"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["23"]["BackgroundTransparency"] = 1;
+G2L["23"]["Size"] = UDim2.new(0.2, -6, 1, 0);
+G2L["23"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["23"]["Text"] = [[Server Version: ROBLOX Studio]];
+G2L["23"]["LayoutOrder"] = 2;
+G2L["23"]["Name"] = [[ServerVersionLabel]];
+
+
+-- StarterGui.RobloxGui.LeaveShield.SettingsShield.VersionContainer.ClientVersionLabel
+G2L["24"] = Instance.new("TextLabel", G2L["21"]);
+G2L["24"]["ZIndex"] = 5;
+G2L["24"]["TextSize"] = 20;
+G2L["24"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["24"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["24"]["BackgroundTransparency"] = 1;
+G2L["24"]["Size"] = UDim2.new(0.2, -6, 1, 0);
+G2L["24"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["24"]["Text"] = [[Client Version: 0.432.0.404847]];
+G2L["24"]["LayoutOrder"] = 1;
+G2L["24"]["Name"] = [[ClientVersionLabel]];
+
+
+-- StarterGui.RobloxGui.LeaveShield.SettingsShield.VersionContainer.PlaceVersionLabel
+G2L["25"] = Instance.new("TextLabel", G2L["21"]);
+G2L["25"]["ZIndex"] = 5;
+G2L["25"]["TextSize"] = 20;
+G2L["25"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["25"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["25"]["BackgroundTransparency"] = 1;
+G2L["25"]["Size"] = UDim2.new(0.2, -6, 1, 0);
+G2L["25"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["25"]["Text"] = [[Place Version: 0 (Latest: 5)]];
+G2L["25"]["LayoutOrder"] = 3;
+G2L["25"]["Name"] = [[PlaceVersionLabel]];
+
+
+-- StarterGui.RobloxGui.LeaveShield.SettingsShield.VersionContainer.EnvironmentLabel
+G2L["26"] = Instance.new("TextLabel", G2L["21"]);
+G2L["26"]["ZIndex"] = 5;
+G2L["26"]["TextSize"] = 20;
+G2L["26"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["26"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["26"]["BackgroundTransparency"] = 1;
+G2L["26"]["AnchorPoint"] = Vector2.new(0.5, 0);
+G2L["26"]["Size"] = UDim2.new(0.2, -6, 1, 0);
+G2L["26"]["Visible"] = false;
+G2L["26"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["26"]["Text"] = [[https://www.roblox.com/]];
+G2L["26"]["LayoutOrder"] = 4;
+G2L["26"]["Name"] = [[EnvironmentLabel]];
+
+
+-- StarterGui.RobloxGui.LeaveShield.SettingsShield.VersionContainer.OverridesPlayerScriptsLabel
+G2L["27"] = Instance.new("TextLabel", G2L["21"]);
+G2L["27"]["ZIndex"] = 5;
+G2L["27"]["TextSize"] = 20;
+G2L["27"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["27"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["27"]["BackgroundTransparency"] = 1;
+G2L["27"]["AnchorPoint"] = Vector2.new(0.5, 0);
+G2L["27"]["Size"] = UDim2.new(0.2, -6, 1, 0);
+G2L["27"]["Visible"] = false;
+G2L["27"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["27"]["Text"] = [[PlayerScripts: Default]];
+G2L["27"]["LayoutOrder"] = 5;
+G2L["27"]["Name"] = [[OverridesPlayerScriptsLabel]];
+
+
+-- StarterGui.RobloxGui.LeaveShield.SettingsShield.Modal
+G2L["28"] = Instance.new("TextButton", G2L["1f"]);
+G2L["28"]["Modal"] = true;
+G2L["28"]["Selectable"] = false;
+G2L["28"]["BackgroundTransparency"] = 1;
+G2L["28"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["28"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["28"]["Text"] = [[]];
+G2L["28"]["Name"] = [[Modal]];
+G2L["28"]["Position"] = UDim2.new(0, 0, 1, -1);
+
+
+-- StarterGui.RobloxGui.LeaveShield.SettingsShield.MenuContainer
+G2L["29"] = Instance.new("Frame", G2L["1f"]);
+G2L["29"]["ZIndex"] = 2;
+G2L["29"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["29"]["Size"] = UDim2.new(0.95, 0, 0.95, 0);
+G2L["29"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["29"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["29"]["Name"] = [[MenuContainer]];
+G2L["29"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.RobloxGui.LeaveShield.SettingsShield.MenuContainer.UIPadding
+G2L["2a"] = Instance.new("UIPadding", G2L["29"]);
+G2L["2a"]["PaddingTop"] = UDim.new(0, 36);
+
+
+-- StarterGui.RobloxGui.LeaveShield.SettingsShield.MenuContainer.MenuListLayout
+G2L["2b"] = Instance.new("UIListLayout", G2L["29"]);
+G2L["2b"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+G2L["2b"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
+G2L["2b"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+G2L["2b"]["Name"] = [[MenuListLayout]];
+
+
+-- StarterGui.RobloxGui.LeaveShield.SettingsShield.MenuContainer.MenuAspectRatio
+G2L["2c"] = Instance.new("UIAspectRatioConstraint", G2L["29"]);
+G2L["2c"]["AspectRatio"] = 1.33333;
+G2L["2c"]["Name"] = [[MenuAspectRatio]];
+G2L["2c"]["AspectType"] = Enum.AspectType.ScaleWithParentSize;
+
+
+-- StarterGui.RobloxGui.LeaveShield.SettingsShield.MenuContainer.HubBar
+G2L["2d"] = Instance.new("ImageLabel", G2L["29"]);
+G2L["2d"]["ZIndex"] = 3;
+G2L["2d"]["BorderSizePixel"] = 0;
+G2L["2d"]["SliceCenter"] = Rect.new(4, 4, 6, 6);
+G2L["2d"]["ScaleType"] = Enum.ScaleType.Slice;
+G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(79, 85, 97);
+G2L["2d"]["AnchorPoint"] = Vector2.new(0.5, 0);
+G2L["2d"]["Image"] = [[rbxasset://textures/ui/Settings/MenuBarAssets/MenuBackground.png]];
+G2L["2d"]["Size"] = UDim2.new(0, 800, 0, 60);
+G2L["2d"]["Visible"] = false;
+G2L["2d"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["2d"]["BackgroundTransparency"] = 1;
+G2L["2d"]["Name"] = [[HubBar]];
+G2L["2d"]["Position"] = UDim2.new(0.5, 0, 0, 32);
+
+
+-- StarterGui.RobloxGui.LeaveShield.SettingsShield.MenuContainer.HubBar.UIListLayout
+G2L["2e"] = Instance.new("UIListLayout", G2L["2d"]);
+G2L["2e"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+G2L["2e"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+G2L["2e"]["FillDirection"] = Enum.FillDirection.Horizontal;
+
+
+-- StarterGui.RobloxGui.LeaveShield.SettingsShield.MenuContainer.HubBar.PlayersTab
+G2L["2f"] = Instance.new("TextButton", G2L["2d"]);
+G2L["2f"]["ZIndex"] = 3;
+G2L["2f"]["BackgroundTransparency"] = 1;
+G2L["2f"]["Size"] = UDim2.new(0.2, 0, 1, 0);
+G2L["2f"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["2f"]["Text"] = [[]];
+G2L["2f"]["Name"] = [[PlayersTab]];
+
+
+-- StarterGui.RobloxGui.LeaveShield.SettingsShield.MenuContainer.HubBar.PlayersTab.Icon
+G2L["30"] = Instance.new("ImageLabel", G2L["2f"]);
+G2L["30"]["ZIndex"] = 3;
+G2L["30"]["ImageTransparency"] = 0.5;
+G2L["30"]["Image"] = [[rbxasset://textures/ui/Settings/MenuBarIcons/PlayersTabIcon.png]];
+G2L["30"]["Size"] = UDim2.new(0, 44, 0, 37);
+G2L["30"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["30"]["BackgroundTransparency"] = 1;
+G2L["30"]["Name"] = [[Icon]];
+G2L["30"]["Position"] = UDim2.new(0, 15, 0.5, -18);
+
+
+-- StarterGui.RobloxGui.LeaveShield.SettingsShield.MenuContainer.HubBar.PlayersTab.Icon.AspectRatioConstraint
+G2L["31"] = Instance.new("UIAspectRatioConstraint", G2L["30"]);
+G2L["31"]["Name"] = [[AspectRatioConstraint]];
+
+
+-- StarterGui.RobloxGui.LeaveShield.SettingsShield.MenuContainer.HubBar.PlayersTab.Icon.Title
+G2L["32"] = Instance.new("TextLabel", G2L["30"]);
+G2L["32"]["ZIndex"] = 3;
+G2L["32"]["TextSize"] = 24;
+G2L["32"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["32"]["TextTransparency"] = 0.5;
+G2L["32"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["32"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["32"]["BackgroundTransparency"] = 1;
+G2L["32"]["Size"] = UDim2.new(1.05, 0, 1, 0);
+G2L["32"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["32"]["Text"] = [[Players]];
+G2L["32"]["Name"] = [[Title]];
+G2L["32"]["Position"] = UDim2.new(1.2, 0, 0, 0);
+
+
+-- StarterGui.RobloxGui.LeaveShield.SettingsShield.MenuContainer.HubBar.PlayersTab.TabSelection
+G2L["33"] = Instance.new("ImageLabel", G2L["2f"]);
+G2L["33"]["ZIndex"] = 3;
+G2L["33"]["SliceCenter"] = Rect.new(3, 1, 4, 5);
+G2L["33"]["ScaleType"] = Enum.ScaleType.Slice;
+G2L["33"]["Image"] = [[rbxasset://textures/ui/Settings/MenuBarAssets/MenuSelection.png]];
+G2L["33"]["Size"] = UDim2.new(1, 0, 0, 6);
+G2L["33"]["Visible"] = false;
+G2L["33"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["33"]["BackgroundTransparency"] = 1;
+G2L["33"]["Name"] = [[TabSelection]];
+G2L["33"]["Position"] = UDim2.new(0, 0, 1, -6);
+
+
+-- StarterGui.RobloxGui.LeaveShield.SettingsShield.MenuContainer.HubBar.GameSettingsTab
+G2L["34"] = Instance.new("TextButton", G2L["2d"]);
+G2L["34"]["ZIndex"] = 3;
+G2L["34"]["BackgroundTransparency"] = 1;
+G2L["34"]["Size"] = UDim2.new(0.2, 0, 1, 0);
+G2L["34"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["34"]["Text"] = [[]];
+G2L["34"]["Name"] = [[GameSettingsTab]];
+
+
+-- StarterGui.RobloxGui.LeaveShield.SettingsShield.MenuContainer.HubBar.GameSettingsTab.Icon
+G2L["
